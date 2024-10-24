@@ -1,0 +1,11 @@
+node_modules/
+src/generated/
+.next/
+.env
+
+# lock files
+*lock.*
+*.lock
+
+# db
+*.db*

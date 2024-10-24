@@ -1,0 +1,61 @@
+type Data {
+  Tamu: [Tamu!]
+  dNama: String
+  dataId: ID
+}
+
+type Mutation {
+  createTamu(
+    dataDetail: String
+    dataId: Int
+    email: String!
+    kategoriInstansi: String
+    keperluan: String!
+    keperluanDetail: String
+    nama: String!
+    namaInstansi: String
+    nomer: String!
+    pekerjaan: String!
+    saranaId: Int!
+  ): Tamu
+  deleteTamu(id: ID!): Tamu
+}
+
+type Pegawai {
+  NIP: String
+  Tamu: [Tamu!]
+  pNama: String
+  pegawaiId: ID
+}
+
+type Query {
+  Tamu: [Tamu!]
+  data: [Data!]
+  pegawai: [Pegawai!]
+  sarana: [Sarana!]
+}
+
+type Sarana {
+  Tamu: [Tamu!]
+  sNama: String
+  saranaId: ID
+}
+
+type Tamu {
+  bukti: String
+  data: Data
+  dataDetail: String
+  email: String
+  kategoriInstansi: String
+  keperluan: String
+  keperluanDetail: String
+  namaInstansi: String
+  noAntrian: String
+  nomor: String
+  pegawai: Pegawai
+  pekerjaan: String
+  sarana: Sarana
+  status: Boolean
+  tNama: String
+  tamuId: ID
+}
