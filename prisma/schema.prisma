@@ -31,23 +31,27 @@ model Pegawai {
 }
 
 model Tamu {
-    tamuId           Int      @id @default(autoincrement())
-    tNama            String
-    email            String
-    nomer            String
-    keperluan        String
-    keperluanDetail  String?
-    pekerjaan        String
-    kategoriInstansi String?
-    namaInstansi     String?
-    saranaId         Int
-    sarana           Sarana   @relation(fields: [saranaId], references: [saranaId])
-    dataId           Int?
-    data             Data?    @relation(fields: [dataId], references: [dataId])
-    dataDetail       String?
-    noAntrian        String
-    pegawaiId        Int?
-    pegawai          Pegawai? @relation(fields: [pegawaiId], references: [pegawaiId])
-    bukti            String?
-    status           Boolean
+    tamuId             Int      @id @default(autoincrement())
+    tNama              String
+    email              String
+    nomer              String
+    keperluan          String
+    keperluanDetail    String?
+    pekerjaan          String
+    pekerjaanLainnya   String?
+    kategoriInstansi   String?
+    namaInstansi       String?
+    pemanfaatan        String
+    pemanfaatanLainnya String?
+    saranaId           Int
+    sarana             Sarana   @relation(fields: [saranaId], references: [saranaId])
+    dataId             Int?
+    data               Data?    @relation(fields: [dataId], references: [dataId])
+    dataLainnya        String?
+    dataDetail         String?
+    noAntrian          String
+    pegawaiId          Int?
+    pegawai            Pegawai? @relation(fields: [pegawaiId], references: [pegawaiId])
+    bukti              String?
+    status             Boolean
 }

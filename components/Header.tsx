@@ -23,8 +23,8 @@ const Header = () => {
             Home
           </a>
         </Link>
-        <Link href="/" legacyBehavior>
-          <a className="bold" data-active={isActive("/table")}>
+        <Link href="/dashboard" legacyBehavior>
+          <a className="bold" data-active={isActive("/dashboard")}>
             Daftar Tamu
           </a>
         </Link>
